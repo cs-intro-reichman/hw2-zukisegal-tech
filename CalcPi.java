@@ -6,7 +6,7 @@ public class CalcPi {
 		double sum=0.0;
 		
 
-		for(int i=0; i<N-1; i++	)
+	for(int i=0; i<N; i++)
 		{
 			double plus=1.0/((2*i)+1);
 			if(i%2==0)
@@ -20,8 +20,8 @@ public class CalcPi {
 			
 			
 		}
-		System.out.println("pi according to Java:" + Math.PI);
-		System.out.println("pi, approximated:"     + 4.0*sum);
+	System.out.println("pi according to Java: " + Math.PI);
+	System.out.println("pi, approximated: " + String.format("%22.15f", 4.0*sum));
 
 	    
 	}

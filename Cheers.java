@@ -19,21 +19,22 @@ public class Cheers
                         char bigletter= Character.toUpperCase(name.charAt(i));
                         if(bigletter=='A'|| bigletter=='E'|| bigletter=='F'|| bigletter=='H'|| bigletter== 'I'|| bigletter== 'L'|| bigletter=='M'|| bigletter=='N'|| bigletter=='O'|| bigletter=='R'|| bigletter=='S'|| bigletter=='X')
                         {
-                         System.out.println("give me an " + bigletter + "!");
+                         System.out.println("Give me an " + bigletter + ": " + bigletter + "!");
                         }
                         else
                          {
-                         System.out.println("give me a  " + bigletter + "!");
+                         System.out.println("Give me a  " + bigletter + ": " + bigletter + "!");
                          }
                 
 
                 }
-                 while (times>0)
-                 {
-                        System.out.println(name.toUpperCase() + "!!!");
-                        times= times-1;
+                   System.out.println("What does that spell?");
+                   while (times>0)
+                   {
+                           System.out.println(name.toUpperCase() + "!!!");
+                           times= times-1;
 
-                 }
+                   }
 	    
         }
 }

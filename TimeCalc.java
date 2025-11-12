@@ -13,7 +13,7 @@ public class TimeCalc
 
 
 
-		System.out.println(newHour + " : " + newMinutes);
+    System.out.println(String.format("%02d:%02d", newHour, newMinutes));
 
     }
 }

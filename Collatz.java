@@ -9,37 +9,27 @@ public class Collatz
 	boolean verbose= mode.equals("v");
 		for(int seed=1; seed<=N; seed++)
 		{
-			int i=seed;
-			int steps=1;
-			
-			if(verbose)
-			{
-				System .out.print(seed+ " ");
+			int i = seed;
+			int steps = 1;
+			if (verbose) {
+				System.out.print(seed + " ");
 			}
-			while (i!=1)
-			{
-					if (i%2==0)
-					{
-						i= i/2;
-					}
-					else
-					{	
-						i= (3*i)+1;
-					}
-					steps= steps+1;
-					if(verbose)
-					{
-						System.out.print(i+ " ");
-					}
-				
-				}	
-			
-			if (verbose) 
-			{
+			// ensure we always advance at least once so seed=1 prints 1 4 2 1 as required
+			do {
+				if (i % 2 == 0) {
+					i = i / 2;
+				} else {
+					i = (3 * i) + 1;
+				}
+				steps = steps + 1;
+				if (verbose) {
+					System.out.print(i + " ");
+				}
+			} while (i != 1);
+			if (verbose) {
 				System.out.println("(" + steps + ")");
-			
 			}
 		}
-		System.out.println("Every one of the first "+ N + " hailstone sequences reached 1");
+		System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
 	}
 }
